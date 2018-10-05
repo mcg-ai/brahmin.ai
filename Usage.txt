@@ -1,0 +1,23 @@
+Steps to start the server
+
+============================================================================================================
+
+*	Make sure MongoDB and RabbitMQ servers are setup and running
+
+	DB: "modelmgmt"
+		Collection: "models"
+		Collection: "logs"
+		Collection: "users"
+============================================================================================================
+
+*	Start the django server using
+
+ 	> python3 manage.py runserver
+
+============================================================================================================
+
+*	Start the celery worker pool in the same directory
+
+ 	> celery -A tasks worker --loglevel=info
+
+============================================================================================================
